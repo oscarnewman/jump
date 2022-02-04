@@ -1,4 +1,4 @@
-import { JumpProvider, JumpSettings, Text } from 'jump'
+import { JumpProvider, JumpSettings, Text } from 'jump-ui'
 import { useRouter } from 'next/router'
 import { HiExternalLink, HiLink, HiOutlineMail } from 'react-icons/hi'
 import { GiBouncingSpring } from 'react-icons/gi'

@@ -11,7 +11,7 @@
 	"dependencies": {
 		"@radix-ui/colors": "^0.1.8",
 		"clsx": "^1.1.1",
-		"jump": "workspace:*",
+		"jump-ui": "workspace:*",
 		"next": "12.0.8",
 		"noop-tag": "^1.0.2",
 		"react": "17.0.2",
