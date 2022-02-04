@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useContext } from "react";
+import defaultFontMetrics from "@capsizecss/metrics/appleSystem";
 
 export type JumpSettings = {
   history: {
@@ -6,23 +7,29 @@ export type JumpSettings = {
     goBack: () => void;
   };
   trackEvent?: (event: string, payload?: any) => void;
+  fontMetrics: typeof defaultFontMetrics;
+  baseFontSize: number;
 };
 
-/**
- * A context containing  settings for jump
- */
-export const JumpContext = createContext<JumpSettings>({
+const defaultSettings: JumpSettings = {
   history: {
     push: (path) => console.log(`[MOCK] Navigating to ${path}`),
     goBack: () => console.log(`[MOCK] Going back`),
   },
   trackEvent: (event, payload) =>
     console.log(`[MOCK] Tracking event`, { event, payload }),
-});
+  fontMetrics: defaultFontMetrics,
+  baseFontSize: 16
+};
+
+/**
+ * A context containing  settings for jump
+ */
+export const JumpContext = createContext<JumpSettings>(defaultSettings);
 
 type JumpProviderProps = {
   /** Settings object for jump */
-  settings: JumpSettings;
+  settings: Partial<JumpSettings>;
 
   /** The children which will receive this context */
   children: ReactNode;
@@ -34,7 +41,7 @@ export const JumpProvider = ({ children, settings }: JumpProviderProps) => {
     );
 
   return (
-    <JumpContext.Provider value={settings}>{children}</JumpContext.Provider>
+    <JumpContext.Provider value={{...defaultSettings, ...settings}}>{children}</JumpContext.Provider>
   );
 };
 

@@ -47,14 +47,10 @@ export type ClickableProps = {
   /** Box props to apply to the wrapper around `children` to create custom layouts */
   contentProps?: HTMLProps<HTMLDivElement>;
 
-  /**
-   * Segment tracking event name on click
-   */
+  /** Segment tracking event name on click */
   event?: string;
 
-  /**
-   * Payload to be included in a tracking event
-   */
+  /** Payload to be included in a tracking event */
   meta?: Record<string, any>;
 };
 
@@ -76,6 +72,7 @@ function Clickable(
     meta,
     showAccessory = false,
     contentProps = {},
+    className,
     ...restProps
   }: ClickableProps & LinkProps & ButtonProps,
   ref: Ref<any>
@@ -84,12 +81,14 @@ function Clickable(
 
   const handleClick = useCallback(
     (event: React.MouseEvent<any>) => {
-      if (disabled || loading) {
-        event.preventDefault();
-      } else if (goBack) {
-        history.goBack();
-      } else if (href !== undefined) {
-        history.push(href);
+      if (!external) {
+        if (disabled || loading) {
+          event.preventDefault();
+        } else if (goBack) {
+          history.goBack();
+        } else if (href !== undefined) {
+          history.push(href);
+        }
       }
 
       // Always call the onClick handler if it's defined -- we may want actions
@@ -104,6 +103,7 @@ function Clickable(
     },
     [
       disabled,
+      external,
       goBack,
       history,
       href,
@@ -120,11 +120,12 @@ function Clickable(
     className: clsx(
       clickableBase({ display: inline ? "inline" : "default" }),
       { disabled },
-      restProps.className
+      className
     ),
   };
 
   if (href) {
+    props.href = href
     if (openInNewWindow) {
       props.target = "__BLANK";
 

@@ -17,6 +17,7 @@ export const clickableBase = recipe({
     color: "unset",
     fontFamily: 'unset',
     fontSize: '1rem',
+    width: 'auto',
 
     selectors: {
       "&:disabled,&.disabled": {
