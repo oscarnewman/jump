@@ -11,7 +11,8 @@
 		"deploy": "turbo run build --scope=docs --include-dependencies",
 		"dev": "turbo run dev --parallel",
 		"lint": "turbo run lint",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\""
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"publish": "turbo run publish"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.20.0",

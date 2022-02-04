@@ -9,6 +9,10 @@
 		},
 		"dev": {
 			"cache": false
+		},
+		"publish": {
+			"cache": false,
+			"dependsOn": ["^publish"]
 		}
 	}
 }
