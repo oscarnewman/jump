@@ -1,4 +1,4 @@
-const withTM = require('next-transpile-modules')(['jump'])
+const withTM = require('next-transpile-modules')(['jump-ui'])
 
 module.exports = withTM({
 	reactStrictMode: true,

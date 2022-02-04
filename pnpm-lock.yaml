@@ -50,7 +50,7 @@ importers:
     dependencies:
       '@radix-ui/colors': 0.1.8
       clsx: 1.1.1
-      jump-ui: link:../jump
+      jump-ui: link:../jump-ui
       next: 12.0.8_react-dom@17.0.2+react@17.0.2
       noop-tag: 1.0.2
       react: 17.0.2
@@ -67,7 +67,7 @@ importers:
       tsconfig: link:../tsconfig
       typescript: 4.5.5
 
-  packages/jump:
+  packages/jump-ui:
     specifiers:
       '@capsizecss/core': ^3.0.0
       '@capsizecss/metrics': ^0.1.0

@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import 'jump/dist/index.css'
+import 'jump-ui/dist/index.css'
 import '../style/tailwind.css'
 import { useCallback, useEffect } from 'react'
 

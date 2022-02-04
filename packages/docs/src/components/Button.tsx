@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { Clickable } from 'jump'
+import { Clickable } from 'jump-ui'
 import { ComponentProps } from 'react'
 import { tw } from '../utils/tw'
 
