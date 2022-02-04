@@ -24,7 +24,7 @@ export default function Docs() {
 						className="text-accent-11 flex items-center space-x-2"
 					>
 						<GiBouncingSpring className="text-accent-9" />
-						<span>Jump UI</span> foo
+						<span>Jump UI</span>
 					</Text>
 					<Text size="lg" className="text-gray-11">
 						Jumpstart your UI with the components you really need.
