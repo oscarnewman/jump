@@ -11,8 +11,7 @@
 		"deploy": "turbo run build --scope=docs --include-dependencies",
 		"dev": "turbo run dev --parallel",
 		"lint": "turbo run lint",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
-		"prepare": "husky install"
+		"format": "prettier --write \"**/*.{ts,tsx,md}\""
 	},
 	"devDependencies": {
 		"danger": "^11.0.2",
