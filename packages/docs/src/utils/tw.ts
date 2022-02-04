@@ -1,3 +1,3 @@
-import tw from "noop-tag";
+import tw from 'noop-tag'
 
-export { tw };
+export { tw }

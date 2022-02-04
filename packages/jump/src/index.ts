@@ -1,6 +1,5 @@
-import './vars.css';
+import './vars.css'
 
-export * from "./Clickable";
-export * from "./Context";
-export * from "./Text";
-
+export * from './Clickable'
+export * from './Context'
+export * from './Text'
