@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2.0.1
+
       - name: Install deps and build (with cache)
         run: pnpm i
 
