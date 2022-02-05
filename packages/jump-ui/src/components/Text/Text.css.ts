@@ -2,7 +2,7 @@ import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { createTextStyle } from '@capsizecss/vanilla-extract'
 import { mapValues } from 'lodash'
-import { vars } from '../vars.css'
+import { vars } from '../../vars.css'
 
 export const reset = style({
 	margin: 0,

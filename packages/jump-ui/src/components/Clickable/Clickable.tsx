@@ -1,12 +1,12 @@
 import clsx from 'clsx'
 import { forwardRef, HTMLProps, ReactNode, Ref, useCallback } from 'react'
+import { useJump } from '../../contexts'
 import {
 	clickableBase,
 	innerContent,
 	invisible,
 	outerContent,
 } from './Clickable.css'
-import { useJump } from '../Context/JumpContext'
 
 type ButtonOrLinkElement = HTMLAnchorElement | HTMLButtonElement
 

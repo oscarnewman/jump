@@ -8,7 +8,8 @@ export type JumpSettings = {
 	}
 	trackEvent?: (event: string, payload?: any) => void
 	fontMetrics: typeof defaultFontMetrics
-	baseFontSize: number
+
+	formErrorIcon: ReactNode
 }
 
 const defaultSettings: JumpSettings = {
@@ -19,7 +20,7 @@ const defaultSettings: JumpSettings = {
 	trackEvent: (event, payload) =>
 		console.log(`[MOCK] Tracking event`, { event, payload }),
 	fontMetrics: defaultFontMetrics,
-	baseFontSize: 16,
+	formErrorIcon: <span style={{ color: 'orangered' }}>!</span>,
 }
 
 /**

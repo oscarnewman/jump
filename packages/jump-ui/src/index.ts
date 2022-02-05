@@ -1,5 +1,3 @@
-import './vars.css'
-
-export * from './Clickable'
-export * from './Context'
-export * from './Text'
+export * from './contexts'
+export * from './components'
+export * from './vars.css'
