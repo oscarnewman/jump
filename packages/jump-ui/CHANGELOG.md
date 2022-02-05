@@ -1,6 +1,13 @@
 # jump-ui
 
+## 0.1.0
+
+### Minor Changes
+
+- b6ae602: Add `FormControl`
+
 ## 0.0.2
+
 ### Patch Changes
 
 - a7ad764: Remove `Input` stub because I want to re-think the API for it.
