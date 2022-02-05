@@ -1,4 +1,4 @@
-import { JumpProvider, JumpSettings, Text } from 'jump-ui'
+import { JumpProvider, JumpSettings, Text, FormControl } from 'jump-ui'
 import { useRouter } from 'next/router'
 import { HiExternalLink, HiLink, HiOutlineMail } from 'react-icons/hi'
 import { GiBouncingSpring } from 'react-icons/gi'
@@ -17,7 +17,7 @@ export default function Docs() {
 
 	return (
 		<JumpProvider settings={settings}>
-			<div className="space-y-10 p-6 max-w-md mx-auto">
+			<div className="space-y-10 p-6 max-w-md mx-auto pb-24">
 				<div className="space-y-6">
 					<Text
 						size="4xl"
@@ -27,11 +27,23 @@ export default function Docs() {
 						<span>Jump UI</span>
 					</Text>
 					<Text size="lg" className="text-gray-11">
-						Jumpstart your UI with the components you really need.
+						Jumpstart UI with the components you need.
 					</Text>
 				</div>
 
-				<div className="space-y-4 flex flex-col items-start">
+				<nav className="flex gap-2">
+					<a href="#clickable" className="text-accent-11 underline">
+						Clickable
+					</a>
+					<a href="#text" className="text-accent-11 underline">
+						Text
+					</a>
+					<a href="#form-control" className="text-accent-11 underline">
+						Form Control
+					</a>
+				</nav>
+
+				<div id="clickable" className="space-y-4 flex flex-col items-start">
 					<Text size="lg" className="font-medium text-gray-12">
 						Clickable
 					</Text>
@@ -62,7 +74,7 @@ export default function Docs() {
 					</Button>
 				</div>
 
-				<div className="space-y-4">
+				<div id="text" className="space-y-4">
 					<Text size="lg" className="font-medium text-gray-12">
 						Text
 					</Text>
@@ -70,7 +82,7 @@ export default function Docs() {
 						A solid font scale with capsized text for consistent spacing:
 					</Text>
 
-					<div className="overflow-hidden pb-2">
+					<div id="form-control" className="overflow-hidden pb-2">
 						<Text className="whitespace-nowrap" size="xs">
 							The brown dog
 						</Text>
@@ -111,6 +123,32 @@ export default function Docs() {
 							The brown dog
 						</Text>
 					</div>
+				</div>
+
+				<div className="space-y-8">
+					<div className="space-y-4">
+						<Text size="lg" className="font-medium text-gray-12">
+							Form Control Wrapper
+						</Text>
+
+						<Text>Label and error state for form inputs</Text>
+					</div>
+
+					<FormControl label="First name" error="First name is required">
+						<input
+							className="bg-gray-3 border rounded border-gray-5 w-full py-1 px-2"
+							type="text"
+							placeholder="Placeholder Input Tag"
+						/>
+					</FormControl>
+					<FormControl label="First name" error="First name is required">
+						<select className="w-full">
+							<option value="">One</option>
+							<option value="">Two</option>
+							<option value="">Three</option>
+							<option value="">Four</option>
+						</select>
+					</FormControl>
 				</div>
 			</div>
 		</JumpProvider>
