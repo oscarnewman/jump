@@ -11,7 +11,8 @@
 	],
 	"scripts": {
 		"build": "tsup",
-		"dev": "tsup --watch"
+		"dev": "tsup --watch",
+		"publish": "pnpm publish"
 	},
 	"peerDependencies": {
 		"react": "^17.0.37",

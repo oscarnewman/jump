@@ -13,7 +13,7 @@
 		"lint": "turbo run lint",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"publish": "turbo run publish",
-		"release": "pnpm run build && pnpm run publish"
+		"release": "turbo run build && turbo run publish"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.20.0",
